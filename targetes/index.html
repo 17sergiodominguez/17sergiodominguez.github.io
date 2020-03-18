@@ -15,7 +15,7 @@ function print(){
   var necessity = getEl("necessity");
   getEl("form").style.display = "none";
   var container = getEl("content");
-  container.style.backgroundImage = "url("+background+")";
+  container.style = "backgroundImage:url("+background+");";
   
 }
 </script>
@@ -36,6 +36,6 @@ function print(){
 <textarea id = necessity></textarea><br/>
 <button onclick = print()>Print!</button>
   </div>
-<div id = content class = content>Container :)</div>
+<div id = content class = content>Container</div>
 </body>
 </html>
