@@ -3,21 +3,39 @@
 <head>
 <title>Targetes català</title>
 <script>
-
+function getEl(id){
+  return document.getElementById(id);
+}
+function print(){
+  var background = getEl("background");
+  var title = getEl("title");
+  var type = getEl("type");
+  var definition = getEl("definition");
+  var procedence = getEl("Procedence");
+  var necessity = getEl("necessity");
+  getEl("form").hide();
+  var container = getEl("content");
+  container.style.backgroundImage = background;
+  
+}
 </script>
 </head>
 <body>
-<label for = title>Title:</label>
-<input type = text id = title>
-<label for = type>Type:</label>
-<input type = text id = type>
-<label for = definition>Definition:</label>
-<textarea id = definition></textarea>
-<label for = Procedence>Procedence:</label>
-<textarea id = Procedence></textarea>
-<label for = necessity>necessity:</label>
-<textarea id = necessity></textarea>
-
-<div id = content class = content></div>
+  <div id = form>
+<label for = background>Background-image url:</label><br/>
+<input type = text id = background><br/>
+<label for = title>Title:</label><br/>
+<input type = text id = title><br/>
+<label for = type>Type:</label><br/>
+<input type = text id = type><br/>
+<label for = definition>Definition:</label><br/>
+<textarea id = definition></textarea><br/>
+<label for = Procedence>Procedence:</label><br/>
+<textarea id = Procedence></textarea><br/>
+<label for = necessity>necessity:</label><br/>
+<textarea id = necessity></textarea><br/>
+<button onclick = print()>Print!<button>
+  </div>
+<div id = content class = content>A</div>
 </body>
 </html>
