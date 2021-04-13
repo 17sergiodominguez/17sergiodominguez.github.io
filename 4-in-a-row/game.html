@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4 en raya</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+        table {
+            border-collapse: collapse;
+        }
+    </style>
+    <script>
+        function printArr(arr) {
+            var arr2 = arr;
+            for (var i = 0; i<arr2.length; i++) {
+                arr2[i] = "["+arr2[i]+"]";
+            }
+            arr2 = "["+arr2+"]";
+            return arr2;
+        }
+        function drawState(table, arr) {
+            var result = "";
+            for (var y = 0; y<arr[0].length; y++) {
+                result += "<tr>";
+                for (var x = 0; x<arr.length; x++) {
+                    result += "<td>"+x+","+y+"</td>";
+                }
+                result += "</tr>";
+            }
+            table.innerHTML = result;
+        }
+        window.onload = (e) => {
+            var game = document.getElementById("game");
+            var table = eval("[[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0]]");
+            drawState(game, table);
+        }
+    </script>
+</head>
+<body>
+    <table id = "game"></table>
+</body>
+</html>
