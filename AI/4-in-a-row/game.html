@@ -39,7 +39,7 @@
             for (var y = 0; y<arr[0].length; y++) {
                 result += "<tr>";
                 for (var x = 0; x<arr.length; x++) {
-                    result += "<td>"+x+","+y+"</td>";
+                    result += document.getElementById("frameAndToken").innerHTML;
                 }
                 result += "</tr>";
             }
@@ -54,6 +54,6 @@
 </head>
 <body>
     <table id = "game"></table>
-    <div class = "frame"><div class = "token"></div></div>
+    <div id = "frameAndToken" style = "display:none;"><div class = "frame"><div class = "token"></div></div></div>
 </body>
 </html>
